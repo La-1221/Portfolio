@@ -1,115 +1,89 @@
-# Lakachew Ferede Arutie — MERN Stack Portfolio
+<div align="center">
 
-A full-stack developer portfolio built with MongoDB, Express, React, and Node.js — populated with real CV data: education, certifications, internship experience, and projects.
+# Lakachew Ferede
+### Full-Stack Developer · MERN Stack · Open to Work & Collaboration
 
-## Project Structure
+[![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Now-6C63FF?style=for-the-badge)](https://your-portfolio-url.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/lakachewferede)
+[![GitHub](https://img.shields.io/badge/GitHub-La--1221-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/La-1221)
+[![Email](https://img.shields.io/badge/Email-Hire_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](lakachewferede1@email.com)
+
+</div>
+
+---
+
+> **Personal portfolio** showcasing my skills, projects, and experience as a MERN stack developer —  
+> built end-to-end with MongoDB, Express, React, and Node.js.
+
+---
+
+## 🛠️ Tech Stack
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Nodemailer](https://img.shields.io/badge/Nodemailer-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+
+---
+
+## ✨ Highlights
+
+- 🎓 **CGPA 3.54 / 4.0** — Debre Tabor University
+- 🏅 **5 Certifications** — Ethiopian Five Million Coders Program
+- 🏦 **Internship** — Abay Bank, IT/Networking Department
+- 💼 **Featured Projects** — Vehicle Insurance Management System · Unique physiotherapy Speciality clinic website
+- 📬 **Contact form** — saves to MongoDB + sends real email via Nodemailer
+
+---
+
+## 🚀 Run Locally
+
+```bash
+git clone https://github.com/La-1221/portfolio.git
+cd portfolio
+npm run install-all
+
+# Add your environment variables
+cd server && cp.env
+
+npm run dev
+# Client → localhost:3000 · API → localhost:5000
+```
+
+**Required `.env` variables:**
+
+| Variable | Description |
+|---|---|
+| `MONGO_URI` | MongoDB connection string |
+| `EMAIL_USER` | Gmail address |
+| `EMAIL_PASS` | Gmail App Password |
+| `CLIENT_URL` | Frontend URL |
+
+---
+
+## 📂 Project Structure
 
 ```
 portfolio/
-├── client/                  # React frontend
-│   └── src/
-│       ├── components/      # Modular UI components
-│       │   ├── Navbar.js/css
-│       │   ├── Hero.js/css
-│       │   ├── Skills.js/css      (skills + education + certifications)
-│       │   ├── Projects.js/css    (projects + internship experience)
-│       │   ├── Services.js/css
-│       │   ├── Contact.js/css
-│       │   └── Footer.js/css
-│       ├── hooks/
-│       │   ├── useScrollReveal.js
-│       │   └── useTypewriter.js
-│       └── utils/
-│           ├── api.js
-│           └── data.js      # All CV-derived content lives here
-└── server/                  # Express + MongoDB backend
-    ├── index.js
-    ├── models/
-    │   ├── Contact.js
-    │   └── Project.js
-    ├── routes/
-    │   ├── contact.js
-    │   └── projects.js
-    └── controllers/
-        ├── contactController.js
-        └── projectController.js
+├── client/        # React frontend (components, hooks, utils)
+└── server/        # Express API (routes, controllers, models)
 ```
 
-## Quick Start
+All content (skills, projects, experience) lives in `client/src/utils/data.js` — one file to update everything.
 
-### 1. Install all dependencies
+---
 
-```bash
-npm run install-all
-```
+## 🤝 Let's Work Together
 
-### 2. Configure the server
+I'm available for **freelance projects**, **collaborations**, and **full-time roles**.  
+If you're building something interesting — let's talk.
 
-```bash
-cd server
-cp .env.example .env
-# Edit .env with your MongoDB URI and email credentials
-```
+📧 **your@email.com** · 💼 [LinkedIn](https://linkedin.com/in/lakachewferede) · 🐙 [GitHub](https://github.com/La-1221)
 
-| Variable     | Description                              |
-|--------------|-------------------------------------------|
-| `PORT`       | Server port (default: 5000)               |
-| `MONGO_URI`  | MongoDB connection string                 |
-| `EMAIL_USER` | Gmail address for contact notifications   |
-| `EMAIL_PASS` | Gmail App Password (not your login pass)  |
-| `CLIENT_URL` | React app URL (default: localhost:3000)   |
+<div align="center">
 
-### 3. Run in development
+---
+*Crafted with ❤️ by Lakachew Ferede*
 
-```bash
-npm run dev
-```
-
-Starts both client (port 3000) and server (port 5000) concurrently.
-
-### 4. Build for production
-
-```bash
-npm run build
-```
-
-## What's Included (from your CV)
-
-- **Hero** — Name, rotating role titles, CGPA/certifications/internship stats
-- **Skills Matrix** — Tab-filtered Frontend / Backend / Tools, each with real proficiency levels
-- **Education card** — Debre Tabor University, CGPA 3.54/4.0, exit exam score, coursework
-- **Certifications card** — All 5 certifications from the Ethiopian Five Million Coders Program
-- **Project Showcase** — Vehicle Insurance Management System (featured) + Student Management System
-- **Experience timeline** — Abay Bank IT/Networking Internship
-- **Services** — Based on your actual technical skill set
-- **Contact Form** — Real email, phone, GitHub (La-1221), and LinkedIn — saves to MongoDB + sends email via Nodemailer
-
-## Customization
-
-Edit `client/src/utils/data.js` to update any content — it's the single source of truth for:
-- `PROFILE` — name, contact details, bio
-- `SKILLS` — frontend/backend/tools proficiency
-- `PROJECTS` — project list (also syncs live from MongoDB if you add more via the API)
-- `SERVICES`, `CERTIFICATIONS`, `EXPERIENCE`, `EDUCATION`, `NAV_LINKS`
-
-## Tech Stack
-
-| Layer     | Technology                              |
-|-----------|-------------------------------------------|
-| Frontend  | React 18, CSS Modules, react-scroll       |
-| Backend   | Node.js, Express.js                       |
-| Database  | MongoDB, Mongoose                         |
-| Email     | Nodemailer (Gmail)                        |
-| Fonts     | Syne, JetBrains Mono, DM Sans (Google)    |
-
-## Deployment
-
-- **Frontend**: Deploy `client/build` to Vercel / Netlify
-- **Backend**: Deploy `server/` to Railway / Render / Heroku
-- Set `REACT_APP_API_URL` in client env to your production server URL
-
-## Next Steps to Personalize Further
-
-1. Add a real photo — place it in `client/public/` and reference it in `Hero.js`
-2. Add the GitHub repo links for your two projects in `utils/data.js` (currently pointing to your profile root)
-3. If you build more projects, either add them to `PROJECTS` in `data.js`, or `POST` them to `/api/projects` and they'll show automatically (MongoDB data takes priority over the static fallback)
+</div>
