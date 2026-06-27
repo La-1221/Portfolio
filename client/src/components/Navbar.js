@@ -57,7 +57,7 @@ const Navbar = () => {
           offset={-80}
           className="btn btn-primary navbar__cta"
         >
-          Hire Me
+          Contact Me
         </Link>
 
         <button
