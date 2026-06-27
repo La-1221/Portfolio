@@ -20,3 +20,5 @@ Thumbs.db
 
 # React
 client/.eslintcache
+.vscode/
+.vscode/setting.json
