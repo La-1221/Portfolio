@@ -1,0 +1,122 @@
+.experience__inner {
+  display: grid;
+  gap: 40px;
+}
+
+.experience__card {
+  display: grid;
+  gap: 28px;
+  padding: 36px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(
+    180deg,
+    rgba(217, 142, 74, 0.08),
+    rgba(16, 16, 29, 0.95)
+  );
+  border: 1px solid rgba(217, 142, 74, 0.18);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.15);
+}
+
+.experience__card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.experience__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.experience__card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.2vw, 2.2rem);
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.experience__date {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  background: rgba(217, 142, 74, 0.08);
+  border: 1px solid rgba(217, 142, 74, 0.16);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.experience__company {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.experience__summary {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 740px;
+  margin: 0;
+}
+
+.experience__list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.experience__list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+.experience__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 16px rgba(217, 142, 74, 0.2);
+}
+
+@media (max-width: 900px) {
+  .experience__card {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 680px) {
+  .experience__card {
+    padding: 24px;
+  }
+
+  .experience__card-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .experience__date {
+    width: fit-content;
+  }
+}
