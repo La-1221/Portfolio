@@ -1,7 +1,6 @@
 # Dependencies
 node_modules/
-client/node_modules/
-server/node_modules/
+
 
 # Build output
 client/build/
@@ -20,5 +19,5 @@ Thumbs.db
 
 # React
 client/.eslintcache
-.vscode/
+.vscode
 .vscode/settings.json
