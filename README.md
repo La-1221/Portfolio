@@ -6,7 +6,7 @@
 [![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-Visit_Now-6C63FF?style=for-the-badge)](https://your-portfolio-url.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/lakachewferede)
 [![GitHub](https://img.shields.io/badge/GitHub-La--1221-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/La-1221)
-[![Email](https://img.shields.io/badge/Email-Hire_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](lakachewferede1@email.com)
+[![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](lakachewferede1@email.com)
 
 </div>
 
