@@ -79,7 +79,7 @@ All content (skills, projects, experience) lives in `client/src/utils/data.js` �
 I'm available for **freelance projects**, **collaborations**, and **full-time roles**.  
 If you're building something interesting — let's talk.
 
-📧 **your@email.com** · 💼 [LinkedIn](https://linkedin.com/in/lakachewferede) · 🐙 [GitHub](https://github.com/La-1221)
+📧 **lakachewferede1@email.com** · 💼 [LinkedIn](https://linkedin.com/in/lakachewferede) · 🐙 [GitHub](https://github.com/La-1221)
 
 <div align="center">
 
