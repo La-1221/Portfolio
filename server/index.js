@@ -8,11 +8,13 @@ dotenv.config();
 
 // Override DNS servers to public ones (Google DNS / Cloudflare DNS)
 // to resolve MongoDB SRV connection issues (querySrv ETIMEOUT)
-try {
-  const dns = require("dns");
-  dns.setServers(["8.8.8.8", "1.1.1.1"]);
-} catch (err) {
-  console.warn("⚠️ Warning: Failed to set custom DNS servers:", err.message);
+if (process.env.NODE_ENV !== "production") {
+  try {
+    const dns = require("dns");
+    dns.setServers(["8.8.8.8", "1.1.1.1"]);
+  } catch (err) {
+    console.warn("⚠️ Warning: Failed to set custom DNS servers:", err.message);
+  }
 }
 
 const contactRoutes = require("./routes/contact");
