@@ -30,9 +30,14 @@ app.set("trust proxy", 1);
 app.use(express.json({ limit: "10kb" }));
 app.use(express.urlencoded({ extended: true }));
 
+let clientUrl = process.env.CLIENT_URL || "http://localhost:3000";
+if (clientUrl.endsWith("/")) {
+  clientUrl = clientUrl.slice(0, -1);
+}
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+    origin: clientUrl,
     methods: ["GET", "POST"],
     credentials: true
   })
