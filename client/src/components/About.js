@@ -1,6 +1,6 @@
 import React from "react";
 import useScrollReveal from "../hooks/useScrollReveal";
-import { PROFILE, LANGUAGES } from "../utils/data";
+import { PROFILE } from "../utils/data";
 import "./About.css";
 
 const About = () => {
@@ -13,7 +13,7 @@ const About = () => {
           ref={ref}
           className={`section-intro ${isVisible ? "fade-up" : ""}`}
         >
-          <p className="section-label">// about</p>
+          <p className="section-label">{"// about"}</p>
           <h2 className="section-title">Profile summary</h2>
           <p className="section-subtitle">
             A quick read on how I work and what I&apos;m looking for next.

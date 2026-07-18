@@ -27,7 +27,7 @@ const Services = () => {
     <section className="section services" id="services">
       <div className="container">
         <div ref={ref} className={`services__header ${isVisible ? 'fade-up' : ''}`}>
-          <p className="section-label">// what I do</p>
+          <p className="section-label">{"// what I do"}</p>
           <h2 className="section-title">Services</h2>
           <p className="section-subtitle">
             From idea to deployment — here's how I can help.

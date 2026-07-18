@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useScrollReveal from "../hooks/useScrollReveal";
 import { fetchProjects } from "../utils/api";
-import { PROJECTS, EXPERIENCE } from "../utils/data";
+import { PROJECTS } from "../utils/data";
 import "./Projects.css";
 
 const FILTERS = ["all", "fullstack", "academic"];
@@ -89,7 +89,7 @@ const Projects = () => {
   const [projects, setProjects] = useState(PROJECTS);
   const [filter, setFilter] = useState("all");
   const { ref, isVisible } = useScrollReveal();
-  const { ref: expRef, isVisible: expVisible } = useScrollReveal();
+
 
   useEffect(() => {
     fetchProjects()
@@ -111,7 +111,7 @@ const Projects = () => {
           ref={ref}
           className={`projects__header ${isVisible ? "fade-up" : ""}`}
         >
-          <p className="section-label">// work</p>
+          <p className="section-label"> {"// work"}</p>
           <h2 className="section-title">Project Showcase</h2>
           <p className="section-subtitle">
             Things I've built — from class projects to a full-stack system.
