@@ -71,9 +71,14 @@ const Contact = () => {
       setForm(INITIAL);
     } catch (err) {
       setStatus('error');
-      setErrorMsg(
-        err.response?.data?.message || 'Something went wrong. Please try again.'
-      );
+      const validationErrors = err.response?.data?.errors;
+      if (validationErrors && Array.isArray(validationErrors)) {
+        setErrorMsg(validationErrors.map((e) => e.msg).join(', '));
+      } else {
+        setErrorMsg(
+          err.response?.data?.message || err.message || 'Something went wrong. Please try again.'
+        );
+      }
     }
   };
 

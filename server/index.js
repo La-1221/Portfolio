@@ -35,9 +35,25 @@ if (clientUrl.endsWith("/")) {
   clientUrl = clientUrl.slice(0, -1);
 }
 
+const allowedOrigins = [clientUrl];
+if (process.env.NODE_ENV !== "production") {
+  allowedOrigins.push("http://localhost:3000");
+  allowedOrigins.push("http://127.0.0.1:3000");
+}
+
 app.use(
   cors({
-    origin: clientUrl,
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps, curl, or same-origin)
+      if (!origin) return callback(null, true);
+      
+      const normalizedOrigin = origin.endsWith("/") ? origin.slice(0, -1) : origin;
+      if (allowedOrigins.includes(normalizedOrigin)) {
+        return callback(null, true);
+      }
+      
+      return callback(new Error(`Origin ${origin} not allowed by CORS`));
+    },
     methods: ["GET", "POST"],
     credentials: true
   })
